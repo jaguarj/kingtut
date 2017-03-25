@@ -11,7 +11,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var methodOverride = require('method-override');
 var db = require('./db');
-mongoose.connect('mongoose://localhost/kingtut');
+mongoose.connect('mongodb://localhost/kingtut');
 
 
 
