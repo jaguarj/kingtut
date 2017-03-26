@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+<h2>Create Your Profile</h2>
+		<form action="/users/new" method="POST">
+				<h2><label for='username'>Create Username</label></h2>
+
+				<input type='text' name='username' required="required" /><br />
+
+				<h2><label for='password'>Create Password</label></h2>
+
+				<input type='password' name='password' required="required"><br />
+
+				<h2><label for='email'>Email</label></h2>
+
+				<input type='email' name='email' required="required"><br />
+
+				<input type='submit' value='Create New User!'/>
+		</form>
+<a href='/'>Main Page</a>

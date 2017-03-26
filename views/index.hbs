@@ -1,13 +1,13 @@
 <h1>{{title}}</h1>
-<p>Welcome to KingTUT{{title}}</p>
-	<ul>
+<!-- <p>Welcome to{{title}}</p> -->
+<!-- 	<ul>
 		{{#each users}}
-			<li><a href="/users/{{this.id}}">{{this.username}}</a></li>
+			<a href="/users/{{this.id}}">{{this.username}}</a>
 		{{/each}}
-	</ul>
-	<!-- <h2>Login</h2> -->
+	</ul> -->
+<h3>Home Page</h3>
 	<div>
-		<form action="/users/{{this.id}}"{{this.username}} method="get">
+		<form action="users/{{this.id}}"{{this.username}} method="get">
 			<h2><label for='username'>Username</label></h2>
 			<input type='text' name='username' required="required" /><br />
 			<h2><label for='password'>Password</label></h2>
@@ -16,4 +16,4 @@
 		</form>
 	</div>
 
-<h3><a href="/users/">Sign up!</a></h3>
+<h3><a href="users/new">Sign up!</a></h3>
