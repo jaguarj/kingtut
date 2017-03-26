@@ -1,4 +1,4 @@
-pry = require('pryjs')''
+pry = require('pryjs');
 
 var mongoose = require('mongoose');
 var express = require('express');
@@ -10,14 +10,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var methodOverride = require('method-override');
-var db = require('./db');
 mongoose.connect('mongodb://localhost/kingtut');
-
-
+var db = require('./db/db.js');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
-var tuts = require('./routes/tuts');
+var usersController = require('./routes/users');
+var tutsController = require('./routes/tuts');
 var app = express();
 
 // view engine setup
@@ -41,8 +39,8 @@ app.use(session({
 }));
 
 app.use('/', index);//Index page
-app.use('/users', users);//Users page
-app.use('/tuts', tuts);//Tuts page
+app.use('/users', usersController);//Users page
+app.use('/tuts', tutsController);//Tuts page
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

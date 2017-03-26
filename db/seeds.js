@@ -7,9 +7,7 @@ var Tut = require('./models/tut');
 // Use native promises
 mongoose.promise = global.Promise;
 
-
 // First clear the database of existing users and tuts.
-
 User.remove({}, function(err) {// Does order matter, should tut come first?
 	console.log(err);
 });
@@ -39,7 +37,6 @@ var marc = new User({
 	updated_at: Date,
 	tuts: [url String]
 });
-
 
 var newTut = new Tut({
 	// id: String,

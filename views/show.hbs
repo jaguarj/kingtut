@@ -1,0 +1,25 @@
+<h1>{{user.first_name}}</h1>
+	<div>
+		<li>First name: {{user.first_name}}</li>
+		<li>Last name: {{user.last_name}}</li>
+		<li>Email: {{user.email}}</li>
+		<li>Username: {{user.username}}</li>
+		<li>Password: {{user.password}}</li>
+		<li>Created: {{user.created_at}}</li>
+		<li>Updated: {{user.updated_at}}</li>
+		<li>Tuts: {{user.tuts}}</li>
+	</div>
+<!-- 	<div>
+		<form action="/users/{{user.id}}/edit?_method=DELETE" method="POST">
+			<input type="submit" value="Delete User"/>
+		</form>
+	</div>
+ -->
+<!-- first_name: req.body.first_name,
+		last_name: req.body.last_name,
+		email: req.body.email,
+		username: req.body.username,
+		password: req.body.password,
+		created_at: req.body.created_at,
+		updated_at: req.body.updated_at,
+		tuts: req.body.tuts -->

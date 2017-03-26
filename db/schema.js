@@ -19,9 +19,9 @@ TutSchema.pre('save', function(next){
 	next();
 });
 
-TutSchema.virtual('link').get(function (){
-	return.this.name + ' ' + this.link;
-});
+// TutSchema.virtual('link').get(function (){
+// 	return this.name + ' ' + this.link;
+// });
 
 var UserSchema = new Schema({
 	first_name: String,
@@ -31,7 +31,7 @@ var UserSchema = new Schema({
 	password: String,
 	created_at: Date,
 	updated_at: Date,
-	tuts: [url String]
+	tuts: [String]
 });
 
 UserSchema.pre('save', function(next){
@@ -44,7 +44,7 @@ UserSchema.pre('save', function(next){
 });
 
 UserSchema.virtual('fullname').get(function (){
-	return.this.first_name + ' ' + this.last_name;
+	return this.first_name + ' ' + this.last_name;
 });
 
 var TutModel = mongoose.model('Tut', TutSchema);
