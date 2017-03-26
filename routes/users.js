@@ -16,6 +16,7 @@ router.get('/', function(req, res, next) {
 		});
 });
 
+// Create a new user.
 router.post('/', function(req, res) {
 	var newUser = new User({
 		first_name: req.body.first_name,
@@ -31,6 +32,7 @@ router.post('/', function(req, res) {
 	res.redirect('/users');
 });
 
+//GET user by id.
 router.get('/:id', function(req, res){
 	User.findById(req.params.id)
 		.exec(function(err, user){
@@ -40,5 +42,8 @@ router.get('/:id', function(req, res){
 		});
 	});
 });
+
+
+
 
 module.exports = router;
