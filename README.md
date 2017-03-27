@@ -6,7 +6,7 @@ This makes your learning experience more organizied instead of having to remembe
 
 ### How to get going!
 
- ..*1. Sign up
+ ..* Sign up
 2. Create a username
 3. Start storing your apps!
 
@@ -22,7 +22,7 @@ This makes your learning experience more organizied instead of having to remembe
 8. Heroku
 9. GitHub
 10. Trello
-[Trello Link](https://trello.com/b/fGJ9x6c7/kingtut-app)
+[Link](https://trello.com/b/fGJ9x6c7/kingtut-app)
 
 
 
