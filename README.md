@@ -5,13 +5,13 @@ Storing URLs manually in _KingTUT_ lets you customize and organize your favorite
 This makes your learning experience more organizied instead of having to remember what tutorial you were working on last or where you found it.
 
 ### How to get going!
- ..*
-1. Sign up
+
+ ..*1. Sign up
 2. Create a username
 3. Start storing your apps!
 
 ### Techonologies Used
-..*
+
 1. HTML
 2. CSS
 3. JavaScript
