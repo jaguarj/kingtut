@@ -59,7 +59,7 @@ var UserSchema = new Schema({
 	created_at: Date,
 	updated_at: Date,
 	items: [ItemSchema],
-	ProjectIdeas: [ProjectIdeaSchema] // Make this tuts.
+	projectIdeas: [ProjectIdeaSchema] // Make this tuts.
 	// tuts: [String]
 });
 
