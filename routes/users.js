@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user.js');
 
+//DO NOT USE THIS ROUTES PAGE //
+//-------------------------------//
+
 // Users Home Page Route
 router.get('/', function(req, res) {
 	User.find({})

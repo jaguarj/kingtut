@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var Tut = require('../models/tut.js');
 
+//DO NOT USE THIS ROUTES PAGE //
+//-------------------------------//
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
