@@ -7,7 +7,7 @@ This makes your learning experience more organizied instead of having to remembe
 ### How to get going!
 * Sign up
 * Create a username
-* Start storing your apps!
+* Start storing your tuts!
 
 ### Techonologies Used
 
