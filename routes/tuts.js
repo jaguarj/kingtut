@@ -1,12 +1,18 @@
 var express = require('express');
 var router = express.Router();
-
-var User = require('../models/tut.js');
+var Tut = require('../models/tut.js');
 
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a tut resource');
+	Tut.findById(req.params.userId)
+	.exec(function(err, user){
+		if (err) { console.log(err); }
+		// res.send('respond with a tut resource');
+		res.render('tuts/index', {
+			user: user
+		});
+	});
 });
 
 router.post('/', function(req, res) {
@@ -18,7 +24,7 @@ router.post('/', function(req, res) {
 	updated_at: Date
 });
 	newTut.save();
-	res.send(newTut);
+	res.render('tuts/new');
 });
 
 module.exports = router;

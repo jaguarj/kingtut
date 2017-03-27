@@ -39,7 +39,6 @@ var marc = new User({
 });
 
 var newTut = new Tut({
-	// id: String,
 	name: String,
 	link: String,
 	created_at: Date,
@@ -61,6 +60,11 @@ tuts.forEach(function(tut, i){
 	});
 });
 
+tut.save(function(err){
+	if (err) console.log(err);
+	console.log('tut created!');
+});
+
 users.forEach(function(user, i){
 	user.save(function(err){
 		if(err) { console.log(err); }
@@ -69,11 +73,6 @@ users.forEach(function(user, i){
 	});
 });
 
-
-tut.save(function(err){
-	if (err) console.log(err);
-	console.log('tut created!');
-});
 
 user.save(function(err){
 	if (err) console.log(err);
