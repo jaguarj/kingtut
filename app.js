@@ -1,6 +1,6 @@
 pry = require('pryjs');
 
-var mongoose = require('mongoose');
+
 var express = require('express');
 var hbs = require('hbs');//View engine
 var path = require('path');//View engine
@@ -10,12 +10,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var methodOverride = require('method-override');
+var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/kingtut');
-var db = require('./db/db.js');
-
-var index = require('./routes/index');
-var usersController = require('./routes/users');
-var tutsController = require('./routes/tuts');
+var db = require('./db/db.js'); //Original settings
 var app = express();
 
 // view engine setup
@@ -26,7 +23,8 @@ app.set('view engine', 'hbs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.urlencoded({ extended: false }));// Original Settings
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
@@ -38,9 +36,16 @@ app.use(session({
 	saveUninitialized: false
 }));
 
-app.use('/', index);//Index page
+// Controllers
+// var index = require('./routes/index'); // Original settings
+var usersController = require('./controllers/usersController.js');
 app.use('/users', usersController);//Users page
-app.use('/tuts', tutsController);//Tuts page
+
+var projectIdeasController = require('./controllers/projectIdeasController.js');
+app.use('/users/:userId/project-ideas', projectIdeasController);//Tuts page
+
+app.use('/', index);//Index page
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
