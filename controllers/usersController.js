@@ -107,9 +107,9 @@ router.get('/:id/tuts', function(req, res){
 		.exec(function(err, user){
 			if (err) { console.log(err); }
 			console.log(user.id)
-			console.log(user.items)
+			console.log(user.tuts)
 			res.render('tuts/index.hbs', {
-				items: user.items,
+				tuts: user.tuts,
 				user: user
 
 		});
@@ -120,7 +120,7 @@ router.get('/:id/tuts', function(req, res){
 router.post('/:id/tuts', function(req, res){
 	User.findById(req.params.id)
 		.exec(function(err, user){
-			user.tut.push(new Tut({name: req.body.name}));
+			user.tuts.push(new Tut({name: req.body.name}));
 			user.save(function(err){
 			if (err) console.log(err);
 			res.redirect('/users');
@@ -145,7 +145,7 @@ router.get('/:id/tuts/new', function(req, res){
 router.delete('/:userId/tuts/:id', function(req, res){
 	User.findByIdAndUpdate(req.params.userId, {
 		$pull: {
-			items: {_id: req.params.id}
+			tuts: {_id: req.params.id}
 		}
 	})
 	.exec(function(err, tut){

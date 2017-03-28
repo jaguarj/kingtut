@@ -2,7 +2,7 @@
 
 <ul>
 	{{#each user.tuts}}
-		<li><a href="/users/{{../user.id}}/tuts/{{this.id}}">{{this.description}}</a></li>
+		<li><a href="/users/{{../user.id}}/tuts/{{this.id}}">{{this.name}}</a></li>
 		<br />
 	{{/each}}
 	<a href="/users{{this.id}}/tuts/new">New Tut</a>

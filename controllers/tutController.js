@@ -4,7 +4,7 @@ var router = express.Router({mergeParams: true});
 var User = require('../models/user');
 var Tut = require('../models/tut');
 
-// Make the variables camelCase
+
 
 // Tut idea route
 router.get('/', function indexTut(req, res){
@@ -47,8 +47,8 @@ router.put('/:id', function updateTut(req, res){
 			if (err) { console.log(err); }
 			const tut = user.tuts.id(req.params.id);
 
-			tut.description = req.body.description
-			tut.in_progress = req.body.in_progress
+			tut.name = req.body.name
+			tut.link = req.body.link
 			user.save();
 
 			res.render('tut/show', {
@@ -76,7 +76,7 @@ router.post('/', function createTut(req, res){
 			if (err) { console.log(err); }
 //Add new tut based off this model.
 			const newTut = {
-				description: req.body.description,
+				name: req.body.name,
 				in_progress: req.body.in_progress
 			}
 
