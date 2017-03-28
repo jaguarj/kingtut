@@ -26,6 +26,7 @@ var UserSchema = new Schema({
 	first_name: String,
 	last_name: String,
 	email: { type: String, required: true, unique: true },
+	username: String, //Added username property at 5:12
 	created_at: Date,
 	updated_at: Date,
 	tuts: [TutSchema]
