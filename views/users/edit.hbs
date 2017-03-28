@@ -1,5 +1,5 @@
 <h1>Edit your credentials!</h1>
-<h1>{{user.first_name}}</h1>
+<h1>{{user.username}}</h1>
 
 <form action="/users/{{user.id}}?_method=PUT" method="POST">
 	<div>
@@ -24,8 +24,4 @@
 		<input type='submit' value='Done!'/>
 	</div>
 </form>
-<!-- // This is not working!! Get help. -->
-<!-- http://localhost:3000/users/show -->
-<!-- <h3><a href='users/show'>User Profile</a></h3>
-This page needs to refer back to the user's profile show page!
- -->
+

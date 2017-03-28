@@ -10,7 +10,6 @@ router.get('/', function(req, res) {
 		.exec(function(err, users){
 			if (err) { console.log(err); }
 			console.log(users);
-			// res.send("This is the home page route");
 			res.render('users/index.hbs', {
 				users: users
 		});
@@ -33,7 +32,6 @@ router.get('/new', function(req, res){
 router.post('/', function(req, res) {
 	var user = new User({
 		first_name: req.body.first_name,
-		// last_name: req.body.last_name, // Original settings
 		email: req.body.email,
 		tuts: req.body.tuts
 		// username: req.body.username,
@@ -45,7 +43,6 @@ router.post('/', function(req, res) {
 	user.save(function(err, user){
 		if (err) { console.log(err); }
 		console.log(user);
-		// res.send("This is the users ID Page");
 		res.redirect('/users');
 	});
 });
@@ -65,10 +62,12 @@ router.get('/:id/edit', function(req, res){
 // User Update Route
 router.put('/:id', function(req, res){
 	User.findByIdAndUpdate(req.params.id, {
+		$set: {
 		first_name: req.body.first_name,
-		// last_name: req.body.last_name, // Original settings
-		// username: req.body.username,
-		email: req.body.email
+		last_name: req.body.last_name, // Original settings
+		email: req.body.email,
+		// tuts: req.body.tuts
+		},
 	}, { new: true })
 		.exec(function(err, user){
 			if (err) { console.log(err); }
@@ -91,7 +90,7 @@ router.get('/:id', function(req, res){
 	});
 });
 
-// This is not working!! Get help.
+
 // User Delete Route
 router.delete('/:id', function(req, res){
 	User.findByIdAndRemove(req.params.id)
@@ -135,8 +134,9 @@ router.get('/:id/tuts/new', function(req, res){
 	User.findById(req.params.id)
 		.exec(function (err, user) {
 			if (err) { console.log(err) }
-				res.render('tuts/new', {
+				res.render('tuts/show', {
 					user: user
+
 		});
 	});
 });

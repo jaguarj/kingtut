@@ -1,7 +1,7 @@
 <h1>KingTUT</h1>
 <ul>
 	{{#each users}}
-		<li><a href="/users/{{this.id}}">{{this.first_name}}</a></li>
+		<li><a href="/users/{{this.id}}">{{this.first_name}} {{this.last_name}}</a></li>
 		<li>{{this.email}}</li>
 		<br />
 	{{/each}}

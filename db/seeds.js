@@ -20,10 +20,10 @@ var newTut3 = new Tut({name: "JavaScript Lesson", link: "https://www.youtube.com
 
 var josh = new User({
 	first_name: "Josh",
-	last_name: "Spiele",
+	last_name: "Seipel",
 	email: "josh@gmail.com",
-	username: "josh",
-	password: "josh",
+	username: "jaguarj",
+	password: "password",
 	tuts: [newTut1, newTut2, newTut3]
 });
 

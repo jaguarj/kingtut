@@ -31,6 +31,15 @@ router.get('/:id/edit', function editTut(req, res){
 	});
 });
 
+// User.findByIdAndUpdate(req.params.id, {
+// 		$set: {
+// 		first_name: req.body.first_name,
+// 		last_name: req.body.last_name, // Original settings
+// 		email: req.body.email,
+// 		// tuts: req.body.tuts
+// 		},
+
+
 // Update Tut idea
 router.put('/:id', function updateTut(req, res){
 	User.findById(req.params.userId)
