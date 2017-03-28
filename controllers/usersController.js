@@ -32,9 +32,11 @@ router.get('/new', function(req, res){
 router.post('/', function(req, res) {
 	var user = new User({
 		first_name: req.body.first_name,
+		last_name: req.body.last_name,
 		email: req.body.email,
-		tuts: req.body.tuts
-		// username: req.body.username,
+		username: req.body.username
+		// tuts: req.body.tuts
+
 		// password: req.body.password,
 		// created_at: req.body.created_at,
 		// updated_at: req.body.updated_at,
@@ -66,6 +68,8 @@ router.put('/:id', function(req, res){
 		first_name: req.body.first_name,
 		last_name: req.body.last_name, // Original settings
 		email: req.body.email,
+		// username: req.body.username,
+		// password: req.body.password,
 		// tuts: req.body.tuts
 		},
 	}, { new: true })

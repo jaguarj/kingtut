@@ -12,17 +12,18 @@
 	</div>
 	<div>
 	<!-- 	<a href="/users/{{user.id}}/tuts/new">See tuts</a> -->
-		<a href="/users/{{user.id}}/tuts/">See tuts</a>
+		<a href="/users/{{user.id}}/tuts/">See Tuts</a>
 	</div>
 		<br />
 	<ul>
 		<li>First Name: {{user.first_name}}</li>
 		<li>Last Name: {{user.last_name}}</li>
-		<li>Email: {{user.email}}</li>
+		<br />
 		<li>Username: {{user.username}}</li>
-		<li>Password: {{user.password}}</li>
+		<li>Email: {{user.email}}</li>
+		<br />
 		<li>Sign up date: {{user.created_at}}</li>
 		<li>Updated_at: {{user.updated_at}}</li>
-		<li>Tuts: {{user.tuts}}</li>
+		<br />
 		<li>Number of tuts: {{user.tuts.length}}</li>
 	</ul>

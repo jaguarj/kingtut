@@ -12,7 +12,7 @@ User.remove({}, function(err) {// Does order matter, should tut come first?
 	console.log(err);
 });
 
-var newTut1 = new Tut({name: "CSS Lesson", link: "https://www.youtube.com/watch?v=lQxt6TdzsAo"});
+var newTut1 = new Tut({name: "CSS Lesson", link: "href='https://www.youtube.com/watch?v=lQxt6TdzsAo"});
 var newTut2 = new Tut({name: "HTML Lesson", link: "https://www.youtube.com/watch?v=lQxt6TdzsAo"});
 var newTut3 = new Tut({name: "JavaScript Lesson", link: "https://www.youtube.com/watch?v=lQxt6TdzsAo"});
 
