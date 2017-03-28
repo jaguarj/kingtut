@@ -8,29 +8,29 @@ var Tut = require('../models/tut');
 mongoose.promise = global.Promise;
 
 // First clear the database of existing users and tuts.
-User.remove({}, function(err) {// Does order matter, should tut come first?
+User.remove({}, function(err) {
 	console.log(err);
 });
 
-var newTut1 = new Tut({name: "CSS Lesson", link: "href='https://www.youtube.com/watch?v=lQxt6TdzsAo"});
-var newTut2 = new Tut({name: "HTML Lesson", link: "https://www.youtube.com/watch?v=lQxt6TdzsAo"});
-var newTut3 = new Tut({name: "JavaScript Lesson", link: "https://www.youtube.com/watch?v=lQxt6TdzsAo"});
+// var newTut1 = new Tut({name: "CSS Lesson", link: "https://www.youtube.com/watch?v=lQxt6TdzsAo"});
+// var newTut2 = new Tut({name: "HTML Lesson", link: "https://www.youtube.com/watch?v=lQxt6TdzsAo"});
+// var newTut3 = new Tut({name: "JavaScript Lesson", link: "https://www.youtube.com/watch?v=lQxt6TdzsAo"});
 
-//Create new users.
+// //Create new users.
 
-var josh = new User({
-	first_name: "Josh",
-	last_name: "Seipel",
-	email: "josh@gmail.com",
-	username: "jaguarj",
-	password: "password",
-	tuts: [newTut1, newTut2, newTut3]
-});
+// var josh = new User({
+// 	first_name: "Josh",
+// 	last_name: "Seipel",
+// 	email: "josh@gmail.com",
+// 	username: "jaguarj",
+// 	password: "password",
+// 	tuts: [newTut1, newTut2, newTut3]
+// });
 
-josh.save(function(err){
-	if (err) console.log(err);
-	console.log('josh created!');
-});
+// josh.save(function(err){
+// 	if (err) console.log(err);
+// 	console.log('josh created!');
+// });
 
 
 

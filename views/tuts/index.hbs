@@ -2,13 +2,20 @@
 
 <ul>
 	{{#each user.tuts}}
-		<li><a href="/users/{{../user.id}}/tuts/{{this.id}}">{{this.name}}<br /><br /> {{this.link}}</a></li>
+	<br />
+		<!-- <li><a href="/users/{{../user.id}}/tuts/{{this.id}}">{{this.name}}</a></li> -->
+		<li>{{this.name}}</li>
+		<br />
+		<li><a href="{{this.link}}">{{this.link}}</a></li>
+		<br />
+		<a href="/users/{{../user.id}}/tuts/{{this.id}}edit/">Edit TUT</a>
+		<a href="/users/{{../user.id}}/tuts/{{this.id}}/?_method=DELETE" method="POST">Delete TUT</a>
 		<!-- <li><a href="/users/{{../user.id}}/tuts/{{this.id}}">{{this.name}}<br /><br /> {{this.link}}</a></li> -->
 		<br />
 	{{/each}}
 	<br />
+	<!-- Trying to add buttons for EDIT and DELETE on the USERS TUTS page. 5:00 -->
 	<a href="/users/{{user.id}}/tuts/{{tuts.id}}/new">New Tut</a>
-	<a href="/users/{{user.id}}/tuts/{{tuts.id}}edit/">Edit TUT</a>
-	<a href="/users/{{user.id}}/tuts/{{tuts.id}}/?_method=DELETE" method="POST">Delete TUT</a>
+
 </ul>
 
