@@ -64,7 +64,7 @@ router.get('/new', function newTut(req, res){
 	User.findById(req.params.userId)
 		.exec(function (err, user){
 			if (err) { console.log(err); }
-			res.render('tut/new', {
+			res.render('tuts/new', {
 				user: user
 		});
 	});

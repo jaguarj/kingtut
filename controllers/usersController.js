@@ -70,7 +70,7 @@ router.put('/:id', function(req, res){
 		email: req.body.email,
 		// username: req.body.username,
 		// password: req.body.password,
-		// tuts: req.body.tuts
+
 		},
 	}, { new: true })
 		.exec(function(err, user){
@@ -120,7 +120,7 @@ router.get('/:id/tuts', function(req, res){
 	});
 });
 
-// Create a new item
+// Create a new tut
 router.post('/:id/tuts', function(req, res){
 	User.findById(req.params.id)
 		.exec(function(err, user){
@@ -133,7 +133,7 @@ router.post('/:id/tuts', function(req, res){
 });
 
 
-// Show the new item
+// Show the new tut
 router.get('/:id/tuts/new', function(req, res){
 	User.findById(req.params.id)
 		.exec(function (err, user) {
@@ -145,7 +145,7 @@ router.get('/:id/tuts/new', function(req, res){
 	});
 });
 
-// Remove an item
+// Remove tut
 router.delete('/:userId/tuts/:id', function(req, res){
 	User.findByIdAndUpdate(req.params.userId, {
 		$pull: {
