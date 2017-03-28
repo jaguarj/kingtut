@@ -73,30 +73,32 @@ router.get('/new', function newTut(req, res){
 
 
 // Create a new tut
-router.post('/:id/tuts/:id', function createTut(req, res){
-	User.findById(req.params.userId)
-		.exec(function (err, user){
-			if (err) { console.log(err); }
-//Add new tut based off this model.
-			const newTut = {
-				name: req.body.name,
-				link: req.body.link,
-				in_progress: req.body.in_progress
-			}
+// router.post('/:id/tuts/:id', function createTut(req, res){
+// 	User.findById(req.params.userId)
+// 		.exec(function (err, user){
+// 			if (err) { console.log(err); }
+// //Add new tut based off this model.
+// 			console.log('WOOOOOOOOOOO')
+// 			console.log(req.body)
+// 			const newTut = {
+// 				name: req.body.name,
+// 				link: req.body.link,
+// 				in_progress: req.body.in_progress
+// 			}
 
-			user.tuts.push(newTut)
+// 			user.tuts.push(newTut)
 
-			user.save(function (err) {
-				if (err) console.log(err);
-				console.log('New tut created')
-			});
+// 			user.save(function (err) {
+// 				if (err) console.log(err);
+// 				console.log('New tut created')
+// 			});
 
-			// res.redirect('/users')
+// 			// res.redirect('/users')
 
-			res.render(':id/tuts/:id/new')
-	});
+// 			res.render(':id/tuts/:id/new')
+// 	});
 
-});
+// });
 // After
 // :id/tuts/:id
 

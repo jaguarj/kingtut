@@ -9,6 +9,7 @@ mongoose.promise = global.Promise;
 var TutSchema = new Schema({
 	name: String,
 	link: String,
+	in_progress: Boolean,
 	created_at: Date,
 	updated_at: Date
 });

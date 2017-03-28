@@ -124,11 +124,20 @@ router.get('/:id/tuts', function(req, res){
 router.post('/:id/tuts', function(req, res){
 	User.findById(req.params.id)
 		.exec(function(err, user){
-			user.tuts.push(new Tut({name: req.body.name}));
-			user.save(function(err){
-			if (err) console.log(err);
+			console.log('fewaefijefwajiop')
+			const newTut = {
+				name: req.body.name,
+				link: req.body.link,
+				in_progress: req.body.in_progress
+			}
+
+			user.tuts.push(newTut)
+
+			user.save(function (err) {
+				if (err) console.log(err);
+				console.log('New tut created')
+			});
 			res.redirect('/users');
-		});
 	});
 });
 
