@@ -1,6 +1,5 @@
 pry = require('pryjs');
 
-
 var express = require('express');
 var hbs = require('hbs');//View engine
 var path = require('path');//View engine
@@ -41,10 +40,9 @@ app.use(session({
 var usersController = require('./controllers/usersController.js');
 app.use('/users', usersController);//Users page
 
-var projectIdeasController = require('./controllers/projectIdeasController.js');
-app.use('/users/:userId/project-ideas', projectIdeasController);//Tuts page
+var tutController = require('./controllers/tutController.js');
+app.use('/users/:userId/tuts', tutController);//Tuts page
 
-app.use('/', index);//Index page
 
 
 // catch 404 and forward to error handler

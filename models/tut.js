@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 var Schema = require('../db/schema.js');
-var ProjectIdea = Schema.ProjectIdea;
+var Tut = Schema.Tut;
 
-
-module.exports = ProjectIdea;
+module.exports = Tut;

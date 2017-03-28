@@ -6,30 +6,14 @@ mongoose.promise = global.Promise;
 
 // Original Settings //
 
-// var TutSchema = new Schema({
-// 	name: String,
-// 	link: String,
-// 	created_at: Date,
-// 	updated_at: Date
-// });
-
-// TutSchema.pre('save', function(next){
-// 	now = new Date();
-// 	this.updated_at = now;
-// 	if (!this.created_at ) {
-// 		this.created_at = now;
-// 	}
-// 	next();
-// });
-
-var ProjectIdeaSchema = new Schema({
-	description: String,
-	in_progress: Boolean,
+var TutSchema = new Schema({
+	name: String,
+	link: String,
 	created_at: Date,
 	updated_at: Date
 });
 
-ProjectIdeaSchema.pre('save', function(next){
+TutSchema.pre('save', function(next){
 	now = new Date();
 	this.updated_at = now;
 	if (!this.created_at ) {
@@ -38,29 +22,13 @@ ProjectIdeaSchema.pre('save', function(next){
 	next();
 });
 
-
-// TutSchema.virtual('link').get(function (){
-// 	return this.name + ' ' + this.link;
-// });
-
-var ItemSchema = new Schema({
-	name: String
-});
-
 var UserSchema = new Schema({
 	first_name: String,
 	last_name: String,
-	// email: String, // Original settings.
-	// username: String,
-	// password: String,
 	email: { type: String, required: true, unique: true },
-	// username: { type: String, required: true, unique: true },
-	// password: { type: String, required: true, unique: true },
 	created_at: Date,
 	updated_at: Date,
-	items: [ItemSchema],
-	projectIdeas: [ProjectIdeaSchema] // Make this tuts.
-	// tuts: [String]
+	tuts: [TutSchema]
 });
 
 UserSchema.pre('save', function(next){
@@ -77,14 +45,10 @@ UserSchema.pre('save', function(next){
 // });
 
 var UserModel = mongoose.model('User', UserSchema);
-var ItemModel = mongoose.model('Item', ItemSchema);
-var ProjectIdeaModel = mongoose.model('ProjectIdea', ProjectIdeaSchema)
-// var TutModel = mongoose.model('Tut', TutSchema); // Original settings
+var TutModel = mongoose.model('Tut', TutSchema);
 
 
 module.exports = {
-	// Tut: TutModel,
-	Item: ItemModel,
-	User: UserModel,
-	ProjectIdea: ProjectIdeaModel
+	Tut: TutModel,
+	User: UserModel
 };

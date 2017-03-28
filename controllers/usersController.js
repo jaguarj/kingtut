@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var User = require('../models/user.js');
-var Item = require('../models/item.js');
+var Tut = require('../models/tut.js');
 
 // Users Index Route
 router.get('/', function(req, res) {
@@ -35,7 +35,7 @@ router.post('/', function(req, res) {
 		first_name: req.body.first_name,
 		// last_name: req.body.last_name, // Original settings
 		email: req.body.email,
-		items: req.body.items
+		tuts: req.body.tuts
 		// username: req.body.username,
 		// password: req.body.password,
 		// created_at: req.body.created_at,
@@ -103,13 +103,13 @@ router.delete('/:id', function(req, res){
 });
 
 // Item Index
-router.get('/:id/items', function(req, res){
+router.get('/:id/tuts', function(req, res){
 	User.findById(req.params.id)
 		.exec(function(err, user){
 			if (err) { console.log(err); }
 			console.log(user.id)
 			console.log(user.items)
-			res.render('items/index.hbs', {
+			res.render('tuts/index.hbs', {
 				items: user.items,
 				user: user
 
@@ -118,10 +118,10 @@ router.get('/:id/items', function(req, res){
 });
 
 // Create a new item
-router.post('/:id/items', function(req, res){
+router.post('/:id/tuts', function(req, res){
 	User.findById(req.params.id)
 		.exec(function(err, user){
-			user.items.push(new Item({name: req.body.name}));
+			user.tut.push(new Tut({name: req.body.name}));
 			user.save(function(err){
 			if (err) console.log(err);
 			res.redirect('/users');
@@ -131,24 +131,24 @@ router.post('/:id/items', function(req, res){
 
 
 // Show the new item
-router.get('/:id/items/new', function(req, res){
+router.get('/:id/tuts/new', function(req, res){
 	User.findById(req.params.id)
 		.exec(function (err, user) {
 			if (err) { console.log(err) }
-				res.render('items/new', {
+				res.render('tuts/new', {
 					user: user
 		});
 	});
 });
 
 // Remove an item
-router.delete('/:userId/items/:id', function(req, res){
+router.delete('/:userId/tuts/:id', function(req, res){
 	User.findByIdAndUpdate(req.params.userId, {
 		$pull: {
 			items: {_id: req.params.id}
 		}
 	})
-	.exec(function(err, item){
+	.exec(function(err, tut){
 		if (err) console.log(err);
 		res.redirect('/users')
 	});

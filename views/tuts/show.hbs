@@ -1,0 +1,6 @@
+<h1>Description: {{tut.description}}</h1>
+<h1>In Progress: {{tut.in_progress}}</h1>
+	<a href="/users/{{user.id}}/tuts/{{tut.id}}/edit">Edit TUT</a>
+		<form action="/users/{{user.id}}/tuts/{{tut.id}}?_method=DELETE" method="POST">
+			<input type="submit" value="Delete TUT"/>
+		</form>
