@@ -2,8 +2,9 @@
 
 <ul>
 	{{#each user.tuts}}
-		<li><a href="/users/{{../user.id}}/tuts/{{this.id}}">{{this.name}}</a></li>
+		<li><a href="/users/{{../user.id}}/tuts/{{this.id}}">{{this.name}}<br /><br /> {{this.link}}</a></li>
 		<br />
 	{{/each}}
-	<a href="/users{{this.id}}/tuts/new">New Tut</a>
+	<a href="/users{{this.id}}/tuts{{this.id}}/new">New Tut</a>
 </ul>
+adfa

@@ -58,6 +58,7 @@ router.put('/:id', function updateTut(req, res){
 	});
 });
 
+// :id/tuts/:id
 // New tut
 router.get('/new', function newTut(req, res){
 	User.findById(req.params.userId)
@@ -69,8 +70,10 @@ router.get('/new', function newTut(req, res){
 	});
 });
 
+
+
 // Create a new tut
-router.post('/', function createTut(req, res){
+router.post('/:id/tuts/:id', function createTut(req, res){
 	User.findById(req.params.userId)
 		.exec(function (err, user){
 			if (err) { console.log(err); }
@@ -87,7 +90,9 @@ router.post('/', function createTut(req, res){
 				console.log('New tut created')
 			});
 
-			res.redirect('/users')
+			// res.redirect('/users')
+
+			res.render(':id/tuts/:id/new')
 	});
 
 });
