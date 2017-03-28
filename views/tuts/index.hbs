@@ -6,7 +6,9 @@
 		<!-- <li><a href="/users/{{../user.id}}/tuts/{{this.id}}">{{this.name}}<br /><br /> {{this.link}}</a></li> -->
 		<br />
 	{{/each}}
+	<br />
 	<a href="/users/{{user.id}}/tuts/{{tuts.id}}/new">New Tut</a>
-	This link is a problem!! 2:52 pm
+	<a href="/users/{{user.id}}/tuts/{{tuts.id}}edit/">Edit TUT</a>
+	<a href="/users/{{user.id}}/tuts/{{tuts.id}}/?_method=DELETE" method="POST">Delete TUT</a>
 </ul>
 

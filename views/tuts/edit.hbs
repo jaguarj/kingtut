@@ -1,19 +1,19 @@
 <h1>Edit Tuts</h1>
 <form action="/users/{{user.id}}/tuts/{{tut.id}}?_method=PUT" method="POST">
 	<div>
-		<label for="description">
-			Description
+		<label for="name">
+			<h2 id="name">Name</h2>
 		</label>
-			<input type="text" name="description" value="{{tut.description}}"/>
+		<input type="text" name="name" value="{{tut.name}}"/>
 	</div>
 	<div>
 		<label for="in_progress">
-			In Progress?
+			<h2 id="in_progress">In Progress?</h2>
 		</label>
-			<span>Yes<input type="radio" name="in_progress" value="true" checked /></span>
-			<span>No<input type="radio" name="in_progress" value="false"/></span>
+		<span>Yes<input type="radio" name="in_progress" value="true" checked /></span>
+		<span>No<input type="radio" name="in_progress" value="false"/></span>
 	</div>
 	<div>
-	<input type="submit" value="Update Tuts Idea"/>
+		<input type="submit" value="Update Tuts Idea"/>
 	</div>
 </form>

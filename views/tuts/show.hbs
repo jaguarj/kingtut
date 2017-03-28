@@ -3,9 +3,12 @@
 <!-- <h3>In Progress: {{tut.in_progress}}</h3> -->
 <h3>Link: {{tut.link}}</h3>
 
-	<a href="/users/{{user.id}}/tuts/{{tut.id}}/edit/">Edit TUT</a>
+	<a href="/users/{{user.id}}/tuts/{{tuts.id}}/edit/">Edit TUT</a>
 
-	<form action="/users/{{user.id}}/tuts/{{tut.id}}/?_method=DELETE" method="POST">
+	<form action="/users/{{user.id}}/tuts/{{tuts.id}}/?_method=DELETE" method="POST">
 	<br />
-		<input type="submit" value="Delete TUT"/>
+	<input type="submit" value="Delete TUT"/>
 	</form>
+
+
+

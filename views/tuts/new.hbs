@@ -2,20 +2,30 @@
 <form action="/users/{{user.id}}/tuts/{{tuts.id}}" method="POST">
 	<div>
 		<label for="name">
-			Name
+			<h2 id="name">Name</h2>
 		</label>
-			<input type="text" name="name" value="{{tuts.name}}"/>
+			<input type="text" name="name" value="{{tuts.name}}" required="required"/>
 	</div>
+	<br />
+	<div>
+		<label for="link">
+			<h2 id="link">Link</h2>
+		</label>
+			<input type="url" name="name" value="{{tuts.link}}" required="required"/>
+	</div>
+	<br />
 	<div>
 		<label for="in_progress">
-			In Progress?
+			<h2 id="in_progress">In Progress?</h2>
 		</label>
 			<span>Yes<input type="radio" name="in_progress" value="true" checked /></span>
 			<span>No<input type="radio" name="in_progress" value="false"/></span>
 	</div>
+	<br />
 	<div>
-	<input type="submit" value="Update TUT Idea"/>
+		<input type="submit" value="Do it!"/>
 	</div>
+
 </form>
 
 

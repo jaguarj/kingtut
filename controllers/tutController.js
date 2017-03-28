@@ -80,6 +80,7 @@ router.post('/:id/tuts/:id', function createTut(req, res){
 //Add new tut based off this model.
 			const newTut = {
 				name: req.body.name,
+				link: req.body.link,
 				in_progress: req.body.in_progress
 			}
 
@@ -96,7 +97,11 @@ router.post('/:id/tuts/:id', function createTut(req, res){
 	});
 
 });
+// After
+// :id/tuts/:id
 
+// Before
+// /:id
 // Delete
 router.delete('/:id', function deleteTut(req, res){
 	User.findById(req.params.userId)

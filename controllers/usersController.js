@@ -105,7 +105,7 @@ router.delete('/:id', function(req, res){
 	});
 });
 
-// Item Index
+// Tuts Index
 router.get('/:id/tuts', function(req, res){
 	User.findById(req.params.id)
 		.exec(function(err, user){
@@ -144,6 +144,17 @@ router.get('/:id/tuts/new', function(req, res){
 		});
 	});
 });
+// Just added the Edit route 4:44pm Not working...
+// router.put('/:userId/tuts/:id/new', function(req, res){
+// 	User.findByIdAndUpdate(req.params.id)
+// 		User.findById(req.params.id)
+// 		.exec(function (err, user) {
+// 			if (err) { console.log(err) }
+// 				res.render('/:id/tuts/edit', {
+// 					user: user
+// 		});
+// 	});
+// });
 
 // Remove tut
 router.delete('/:userId/tuts/:id', function(req, res){
