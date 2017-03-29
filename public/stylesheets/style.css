@@ -16,6 +16,7 @@ body {
 	font-size: 14px;
 	/*font-weight: black;*/
 	font-family: 'Roboto', sans-serif;
+/*	min-height: 1000px;*/
 
 /*	background-size: cover;
 	background-attachment: fixed;
@@ -55,6 +56,11 @@ body {
 
 #bottom {
 	text-align: center;
+	margin-top: 600px;
+	background: rgba(0,0,0,0.2);
+	/*position: relative;
+  	bottom: 10px;*/
+  /*left: 10px;*/
 }
 
 img {
