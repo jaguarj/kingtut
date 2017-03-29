@@ -8,6 +8,7 @@ html {
 body {
 	margin: 0 auto;
 	font-family: 'Roboto', sans-serif;
+	transition:  background-color 0.3s ease-in-out;
 }
 
 #wrapper {
@@ -143,7 +144,7 @@ input:hover {
 @media only screen and (max-width: 520px) {
 
 	body {
-		/*background: tourquise;*/
+		background: tomato;
 		transition:  background-color 0.3s ease-in-out;
 	}
 }
