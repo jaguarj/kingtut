@@ -1,14 +1,12 @@
 /** {
-
 	border: 1px solid blue;
 }
 */
 html {
-	/*background: url(../images/bg.jpg);*/
 	background-image: url(../images/bg.jpg);
-	/*background-size: 100%;*/
-	background-position: height 100%;
- 	background-repeat: cover;
+	background-size: cover;
+	background-attachment: fixed;
+ 	background-repeat: no-repeat;
 
 }
 
@@ -29,6 +27,7 @@ body {
 	justify-content: space-around;
 	align-items: flex-start;
 	background: rgba(0,0,0,0.7);
+	letter-spacing: .1rem;
 	/*background: rgba();#343444;*/
 	/*box-shadow: 1px 1px 10px 1px;*/
 	transition:  box-shadow 0.8s ease-in-out;
@@ -54,8 +53,6 @@ body {
   left: 0;
 }*/
 
-
-
 .wrapper {
 	/*max-width: 100%;
 	height: 100px;
@@ -67,9 +64,6 @@ body {
 	margin-top: 2rem;
 	text-align: center;
 
-
-
-
 }
 
 .nav {
@@ -78,7 +72,6 @@ body {
 	height: 40px;
 	font-size: 2rem;
 }
-
 
  a {
   color: #00B7FF;
@@ -95,12 +88,16 @@ a:hover {
 	text-shadow: 1px 1px 1px #010;
 }
 
-h2 {
+h2, h3 {
+	color: #00B7FF;
+	text-shadow: 1px 1px 1px #010;
 	font-size: 2.1rem;
+	letter-spacing: .24rem;
 }
 
-h3 {
-	font-size: 2rem;
+h2:hover {
+	font-size: 2.1rem;
+
 }
 
 
@@ -121,7 +118,6 @@ li {
 
 li:hover {
 
-
 }
 
 .back-btn {
@@ -134,23 +130,33 @@ li:hover {
 	text-shadow: 1px 1px 1px #010;
 }
 
-
-/*{{this.first_name}} {{this.last_name}}*/
 #delete, #update, #doIt, #done, #createUser {
 	background: salmon;
 	border-radius: 7px;
-	transition: all .8s ease-in-out;
+	display: inline;
 	height: 2rem;
 	width: 10rem;
 	border: none;
+	color: #fff;
+	letter-spacing: .25rem;
+	transition:  width, letter-spacing, box-shadow, 0.8s ease-in-out;
+/*	transition: .7s ease-in-out;*/
 
 }
 
 #delete:hover, #update:hover, #doIt:hover, #done:hover, #createUser:hover {
 	background: tomato;
 	border-radius: 5px;
+	box-shadow: 1px 1px 10px 1px #111;
+	/*transition:  width, letter-spacing, .7s ease-in-out;*/
+	height: 2.5rem;
+	width: 15%;
+	letter-spacing: .40rem;
 
+}
 
+#createUser {
+	/*display: inline;*/
 }
 
 /*input[type=text] {
@@ -161,8 +167,6 @@ input:focus {
 	outline: none;
 }
 
-
-
 input {
 	font-size: 1rem;
 	font-family: ;
@@ -171,14 +175,11 @@ input {
 	padding: .2rem;
 	border-radius: 10px;
 	height: 20px;
-	transition: all .8s ease-in-out;
-
+/*	transition: all .8s ease-in-out;*/
 }
 
 input:hover {
 	background: #ddd;
-
-
 }
 
 

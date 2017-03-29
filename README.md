@@ -5,7 +5,6 @@ Storing URLs manually in _KingTUT_ lets you customize and organize your favorite
 This makes your learning experience more organizied instead of having to remember what tutorial you were working on last or where you found it.
 
 ### How to get going!
-* Sign up
 * Create a username
 * Start storing your tuts!
 
@@ -20,6 +19,9 @@ This makes your learning experience more organizied instead of having to remembe
 * Node JS
 * Heroku
 * GitHub
+* Facicon Generator
+* Google Fonts - Roboto
+* Photoshop
 * Trello
 [Link](https://trello.com/b/fGJ9x6c7/kingtut-app)
 
