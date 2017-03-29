@@ -19,7 +19,7 @@ This makes your learning experience more organizied instead of having to remembe
 * Node JS
 * Heroku
 * GitHub
-* Facicon Generator
+* Favicon Generator
 * Google Fonts - Roboto
 * Photoshop
 * Trello
