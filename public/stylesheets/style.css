@@ -1,31 +1,16 @@
-/** {
-	border: 1px solid blue;
-}
-*/
 html {
 	background-image: url(../images/bg.jpg);
 	background-size: cover;
 	background-attachment: fixed;
  	background-repeat: no-repeat;
-
 }
 
 body {
 	margin: 0 auto;
-/*	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	/*font-weight: black;*/
 	font-family: 'Roboto', sans-serif;
-/*	min-height: 1000px;*/
-
-/*	background-size: cover;
-	background-attachment: fixed;
- 	background-repeat: no-repeat;*/
-
 }
 
 #wrapper {
-	/*box-sizing: border-box;*/
 	max-width: 100%;
 	height: 100px;
 	display: flex;
@@ -33,60 +18,27 @@ body {
 	align-items: flex-start;
 	background: rgba(0,0,0,0.2);
 	letter-spacing: .1rem;
-	/*background: rgba();#343444;*/
-	/*box-shadow: 1px 1px 10px 1px;*/
 	transition:  box-shadow 0.8s ease-in-out;
-
 }
 
 #wrapper:hover {
 	box-shadow: 1px 1px 10px 1px;
 }
 
-/*footer {
-	background: red;
-	width: 100%;
-	height: 40px;
-	margin: 0;
-	background: rgba(0,0,0,0.2);
-	padding: 5px;
-	display: flex;
-	justify-content: center;
-}*/
-
 #bottom {
 	text-align: center;
-	margin-top: 600px;
+	margin-top: 700px;
 	background: rgba(0,0,0,0.2);
-	/*position: relative;
-  	bottom: 10px;*/
-  /*left: 10px;*/
 }
 
 img {
-	  /* Set rules to fill background*/
   max-height: 30px;
   max-width: 30px;
-  margin-left: 1rem;
-
 }
-  /* Set up positioning */
-  /*position: fixed;*/
-/*  top: 10px;
-  left: 10px;*/
-
 
 .wrapper {
-	/*max-width: 100%;
-	height: 100px;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;*/
-/*	-webkit-box-sizing: border-box;*/
-  	/*box-sizing: border-box;*/
 	margin-top: 2rem;
 	text-align: center;
-
 }
 
 .nav {
@@ -96,14 +48,13 @@ img {
 	font-size: 2rem;
 }
 
- a {
-  color: #00B7FF;
-  text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.8rem;
-  text-shadow: 1px 1px 3px #000;
-  transition:  text-shadow 0.5s ease-in-out;
-
+a {
+	color: #00B7FF;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.8rem;
+	text-shadow: 1px 1px 3px #000;
+	transition:  text-shadow 0.5s ease-in-out;
 }
 
 a:hover {
@@ -123,24 +74,20 @@ h2:hover {
 
 }
 
+h6 {
+	margin: 10px;
+}
 
 ul {
 	padding: 0;
-
 }
 
 li {
 	display: flex;
 	justify-content: center;
 	padding-top: 10px;
-/*	font-family: 'Roboto', sans-serif;*/
 	font-size: 24px;
 	list-style: none;
-
-}
-
-li:hover {
-
 }
 
 .back-btn {
@@ -163,28 +110,16 @@ li:hover {
 	color: #fff;
 	letter-spacing: .25rem;
 	transition:  width, letter-spacing, box-shadow, 0.8s ease-in-out;
-/*	transition: .7s ease-in-out;*/
-
 }
 
 #delete:hover, #update:hover, #doIt:hover, #done:hover, #createUser:hover {
 	background: tomato;
 	border-radius: 5px;
 	box-shadow: 1px 1px 10px 1px #111;
-	/*transition:  width, letter-spacing, .7s ease-in-out;*/
 	height: 2.5rem;
 	width: 15%;
 	letter-spacing: .40rem;
-
 }
-
-#createUser {
-	/*display: inline;*/
-}
-
-/*input[type=text] {
-	appreance: none;
-}*/
 
 input:focus {
 	outline: none;
@@ -192,25 +127,22 @@ input:focus {
 
 input {
 	font-size: 1rem;
-	font-family: ;
+	font-family: 'Roboto', sans-serif;
 	background: #eee;
 	width: 15rem;
 	padding: .2rem;
 	border-radius: 10px;
 	height: 20px;
-/*	transition: all .8s ease-in-out;*/
 }
 
 input:hover {
 	background: #ddd;
 }
 
-
-
 @media only screen and (max-width: 520px) {
 
 	body {
-		background: teal;
+		background: tourquise;
 		transition:  background-color 0.3s ease-in-out;
 	}
 }
