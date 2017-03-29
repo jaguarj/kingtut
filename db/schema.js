@@ -4,12 +4,10 @@ var Schema = mongoose.Schema;
 mongoose.promise = global.Promise;
 
 
-// Original Settings //
-
 var TutSchema = new Schema({
 	name: String,
 	link: String,
-	in_progress: Boolean,
+	// in_progress: Boolean,
 	created_at: Date,
 	updated_at: Date
 });
@@ -27,7 +25,7 @@ var UserSchema = new Schema({
 	first_name: String,
 	last_name: String,
 	email: { type: String, required: true, unique: true },
-	username: String, //Added username property at 5:12
+	username: String,
 	created_at: Date,
 	updated_at: Date,
 	tuts: [TutSchema]
@@ -41,10 +39,6 @@ UserSchema.pre('save', function(next){
 	}
 	next();
 });
-
-// UserSchema.virtual('fullname').get(function (){
-// 	return this.first_name + ' ' + this.last_name;
-// });
 
 var UserModel = mongoose.model('User', UserSchema);
 var TutModel = mongoose.model('Tut', TutSchema);

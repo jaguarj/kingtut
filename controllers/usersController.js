@@ -137,6 +137,7 @@ router.post('/:id/tuts', function(req, res){
 				if (err) console.log(err);
 				console.log('New tut created')
 			});
+
 			res.redirect('/users');
 	});
 });
@@ -150,7 +151,6 @@ router.get('/:id/tuts/new', function(req, res){
 				console.log("############# Show New Users TUT Created #############");
 				res.render('tuts/show', {
 					user: user
-
 		});
 	});
 });

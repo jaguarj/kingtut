@@ -1,18 +1,18 @@
-<h2>User Id Page</h2>This page is good.
-<h1>{{user.first_name}}</h1>
+<h3>User Id Page</h3>
+<h3>{{user.first_name}}</h3>
 	<div>
 		<a href="/users/{{user.id}}/edit">Edit User</a>
 	</div>
 	<br />
 	<div>
 		<form action="/users/{{user.id}}?_method=DELETE" method="POST">
-			<input type="submit" value="Delete user" />
+			<input id="delete" type="submit" value="Delete user" />
 		</form>
 			<br />
 	</div>
 	<div>
 	<!-- 	<a href="/users/{{user.id}}/tuts/new">See tuts</a> -->
-		<a href="/users/{{user.id}}/tuts/">See Tuts</a>
+		<a href="/users/{{user.id}}/tuts/">See TUTs</a>
 	</div>
 		<br />
 	<ul>
@@ -22,8 +22,8 @@
 		<li>Username: {{user.username}}</li>
 		<li>Email: {{user.email}}</li>
 		<br />
-		<li>Sign up date: {{user.created_at}}</li>
-		<li>Updated_at: {{user.updated_at}}</li>
+		<li>Sign UP Date: {{user.created_at}}</li>
+		<li>Updated Date: {{user.updated_at}}</li>
 		<br />
-		<li>Number of tuts: {{user.tuts.length}}</li>
+		<li>Number of TUTs: {{user.tuts.length}}</li>
 	</ul>

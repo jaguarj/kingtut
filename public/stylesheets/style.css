@@ -1,17 +1,93 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+
+	border: 1px solid blue;
 }
 
-a {
+html {
+	background-color: #ccc;
+}
+
+
+body {
+	margin: 0 auto;
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+
+}
+
+#wrapper {
+
+	display: flex;
+	justify-content: center;
+}
+
+.nav {
+	margin-left: 1rem;
+}
+
+
+ a {
   color: #00B7FF;
+  text-decoration: none;
+
+
+
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+
+	/*padding: 10px;*/
+	list-style: none;
+
+}
+
+li:hover {
+
+
+
+
+}
+/*{{this.first_name}} {{this.last_name}}*/
+#delete, #update, #doIt, #done, #createUser {
+	background: salmon;
+	border-radius: 7px;
+	transition: all .8s ease-in-out;
+
+
+}
+
+#delete:hover, #update:hover, #doIt:hover, #done:hover, #createUser:hover {
+	background: tomato;
+	border-radius: 5px;
+	transition: all .8s ease-in-out;
+
+}
+
+input {
+	background: #eee;
+	border-radius: 5px;
+	transition: all .8s ease-in-out;
+
+}
+
+input:focus {
+	background: #ddd;
+
+
 }
 
 
 
 @media only screen and (max-width: 520px) {
-/*	body {
+
+	body {
 		background: teal;
+		transition:  background-color 0.3s ease-in-out;
 	}
 }
-*/
+

@@ -1,26 +1,20 @@
-<h1>Edit Tuts</h1>This page has a redirect issue!!
+<h3>Edit Current TUT</h3>
 <form action="/users/{{user.id}}/tuts/{{tut.id}}?_method=PUT" method="POST">
 	<div>
 		<label for="name">
-			<h2 id="name">Name</h2>
+			<h3 id="name">Name</h3>
 		</label>
 		<input type="text" name="name" required="required"/>
 	</div>
 	<div>
 		<label for="link">
-			<h2 id="link">Link</h2>
+			<h3 id="link">Link</h3>
 		</label>
 		<input type="url" name="link" required="required"/>
 	</div>
-	<div>
-		<label for="in_progress">
-			<h2 id="in_progress">In Progress?</h2>
-		</label>
-		<span>Yes<input type="radio" name="in_progress" value="true" /></span>
-		<span>No<input type="radio" name="in_progress" value="false"/></span>
-	</div>
 	<br />
 	<div>
-		<input type="submit" value="Update TUTS"/>
+		<input id="update" type="submit" value="Update TUT"/>
 	</div>
 </form>
+<h3><a href="/users/{{user.id}}/tuts">Back</a></h3>
