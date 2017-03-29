@@ -10,7 +10,8 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/kingtut');
+require('dotenv').config();
+mongoose.connect(process.env.MONGODB_URI);
 var db = require('./db/db.js'); //Original settings
 var app = express();
 
