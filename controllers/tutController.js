@@ -11,7 +11,7 @@ router.get('/', function indexTut(req, res){
 	User.findById(req.params.userId)
 		.exec(function(err, user){
 			if(err) { console.log(err); }
-			res.render('tut/index.hbs', {
+			res.render('tuts/index.hbs', {
 				user: user
 		});
 	});
@@ -24,23 +24,16 @@ router.get('/:id/edit', function editTut(req, res){
 			if (err) { console.log(err); }
 			const tut = user.tuts.id(req.params.id);
 
-			res.render('tut/edit', {
+			res.render('tuts/edit', {
 				tut: tut,
 				user: user
 		});
 	});
 });
 
-// User.findByIdAndUpdate(req.params.id, {
-// 		$set: {
-// 		first_name: req.body.first_name,
-// 		last_name: req.body.last_name, // Original settings
-// 		email: req.body.email,
-// 		// tuts: req.body.tuts
-// 		},
-
 
 // Update Tut idea
+// /users/:user_id/tuts/:id
 router.put('/:id', function updateTut(req, res){
 	User.findById(req.params.userId)
 		.exec(function (err, user){
@@ -50,11 +43,12 @@ router.put('/:id', function updateTut(req, res){
 			tut.name = req.body.name
 			tut.link = req.body.link
 			user.save();
-
-			res.render('tut/show', {
-				tut: tut,
-				user: user
-		});
+			console.log("#####################TUT Controller#################")
+			// res.render('tuts/show', {
+			// 	tut: tut,
+			// 	user: user
+			// });
+			res.redirect(`/users/${req.params.userId}/tuts/${req.params.id}`)
 	});
 });
 
@@ -70,34 +64,6 @@ router.get('/new', function newTut(req, res){
 	});
 });
 
-
-
-// Create a new tut
-// router.post('/:id/tuts/:id', function createTut(req, res){
-// 	User.findById(req.params.userId)
-// 		.exec(function (err, user){
-// 			if (err) { console.log(err); }
-// //Add new tut based off this model.
-// 			console.log('WOOOOOOOOOOO')
-// 			console.log(req.body)
-// 			const newTut = {
-// 				name: req.body.name,
-// 				link: req.body.link,
-// 				in_progress: req.body.in_progress
-// 			}
-
-// 			user.tuts.push(newTut)
-
-// 			user.save(function (err) {
-// 				if (err) console.log(err);
-// 				console.log('New tut created')
-// 			});
-
-// 			// res.redirect('/users')
-
-// 			res.render(':id/tuts/:id/new')
-// 	});
-
 // });
 // After
 // :id/tuts/:id
@@ -105,11 +71,12 @@ router.get('/new', function newTut(req, res){
 // Before
 // /:id
 // Delete
+// /users/:userId/tuts   /:id
 router.delete('/:id', function deleteTut(req, res){
 	User.findById(req.params.userId)
 		.exec(function (err, user){
 			if (err) { console.log(err); }
-
+			console.log('Deleted from the tutscontroller');
 			user.tuts.id(req.params.id).remove();
 
 			user.save(function (err){
@@ -117,23 +84,26 @@ router.delete('/:id', function deleteTut(req, res){
 				console.log('Tut idea was deleted')
 			});
 
-			res.render('tut/index', {
-				user: user
-		});
+			// res.redirect('/users/' + req.params.userId + '/tuts')
+			res.redirect(`/users/${req.params.userId}/tuts`)
 	});
 });
 
 // Show
+
+// Before
+// /:id'
 router.get('/:id', function showTut(req, res){
 	User.findById(req.params.userId)
 		.exec(function (err, user){
 			if (err) { console.log(err); }
 
 			const tut = user.tuts.id(req.params.id);
-			res.render('tut/show', {
+			console.log("##################DELETE######################");
+			res.render('tuts/show', {
 				tut: tut,
 				user: user
-		});
+			});
 	});
 });
 

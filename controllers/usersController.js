@@ -166,17 +166,18 @@ router.get('/:id/tuts/new', function(req, res){
 // });
 
 // Remove tut
-router.delete('/:userId/tuts/:id', function(req, res){
-	User.findByIdAndUpdate(req.params.userId, {
-		$pull: {
-			tuts: {_id: req.params.id}
-		}
-	})
-	.exec(function(err, tut){
-		if (err) console.log(err);
-		res.redirect('/users')
-	});
-});
+// router.delete('/:id/tuts/:id', function(req, res){
+// 	User.findByIdAndUpdate(req.params.userId, {
+// 		$pull: {
+// 			tuts: {_id: req.params.id}
+// 		}
+// 	});
+// 	.exec(function(err, tut){
+// 		if (err) console.log(err);
+// // Working on this delete route 7:17
+// 		res.render('/:id/tuts/:id/show')
+// 	});
+// });
 
 
 
