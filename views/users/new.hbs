@@ -1,42 +1,44 @@
-<h2>New User</h2>
-<form action="/users" method="POST">
-	<div>
-		<label for="first_name">
-			<h3 id="frist_name">First Name</h3>
-		</label>
-		<input type="text" name="first_name" required="required"/>
-	</div>
-		<br />
-	<div>
-		<label for="last_name">
-			<h3 id="last_name">Last Name</h3>
-		</label>
-		<input type="text" name="last_name" required="required"/>
-	</div>
-		<br />
-	<div>
-		<label for="email">
-			<h3 id="email">Email</h3>
-		</label>
-		<input type="email" name="email" required="required"/>
-	</div>
-		<br />
-	<div>
-		<label for="username">
-			<h3 id="username">Username</h3>
-		</label>
-		<input type="text" name="username" required="required"/>
-	</div>
-		<br />
-	<div>
-		<label for="password">
-			<h3 id="password">Password</h3>
-		</label>
-		<input type="password" name="password" required="required"/>
-	</div>
-		<br />
-	<div>
-		<input id="createUser" type="submit" value="Create User" />
-	</div>
+<div class="wrapper">
+	<h2>New User</h2>
+	<form action="/users" method="POST">
+		<div>
+			<label for="first_name">
+				<h3 id="frist_name">First Name</h3>
+			</label>
+			<input type="text" name="first_name" required="required"/>
+		</div>
+			<br />
+		<div>
+			<label for="last_name">
+				<h3 id="last_name">Last Name</h3>
+			</label>
+			<input type="text" name="last_name" required="required"/>
+		</div>
+			<br />
+		<div>
+			<label for="email">
+				<h3 id="email">Email</h3>
+			</label>
+			<input type="email" name="email" required="required"/>
+		</div>
+			<br />
+		<div>
+			<label for="username">
+				<h3 id="username">Username</h3>
+			</label>
+			<input type="text" name="username" required="required"/>
+		</div>
+			<br />
+		<div>
+			<label for="password">
+				<h3 id="password">Password</h3>
+			</label>
+			<input type="password" name="password" required="required"/>
+		</div>
+			<br />
+		<div>
+			<input id="createUser" type="submit" value="Create User" />
+		</div>
 </form>
-<h3><a href="/users">Back</a></h3>
+</div>
+<h3 class="back-btn"><a href="/users">Back</a></h3>

@@ -1,28 +1,29 @@
-<h3>Edit your credentials!</h3>
-<h2>{{user.username}}</h2>
-
-<form action="/users/{{user.id}}?_method=PUT" method="POST">
-	<div>
-		<label for="first_name">
-			<h3>First Name</h3>
-		</label>
-		<input type="text" name="first_name" required="required" value="{{user.first_name}}"/>
-	</div>
-	<div>
-		<label for="last_name">
-			<h3>Last Name</h3>
-		</label>
-		<input type="text" name="last_name" required="required" value="{{user.last_name}}"/>
-	</div>
-	<div>
-		<label for="email">
-			<h3 id="email">Email</h3>
-		</label>
-		<input type="email" name="email" required="required" value="{{user.email}}"/>
-	</div>
-	<br />
-	<div>
-		<input id="done" type='submit' value='Done!'/>
-	</div>
-</form>
-
+<div class="wrapper">
+	<h3>Edit your credentials!</h3>
+		<h2>{{user.username}}</h2>
+		<form action="/users/{{user.id}}?_method=PUT" method="POST">
+			<div>
+				<label for="first_name">
+					<h3>First Name</h3>
+				</label>
+				<input type="text" name="first_name" required="required" value="{{user.first_name}}"/>
+			</div>
+			<div>
+				<label for="last_name">
+					<h3>Last Name</h3>
+				</label>
+				<input type="text" name="last_name" required="required" value="{{user.last_name}}"/>
+			</div>
+			<div>
+				<label for="email">
+					<h3 id="email">Email</h3>
+				</label>
+				<input type="email" name="email" required="required" value="{{user.email}}"/>
+			</div>
+			<br />
+			<div>
+				<input id="done" type='submit' value='Done!'/>
+			</div>
+	</form>
+</div>
+<h3 class="back-btn"><a href="/users">Back</a></h3>

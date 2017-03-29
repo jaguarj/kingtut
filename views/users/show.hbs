@@ -1,29 +1,31 @@
-<h3>User Id Page</h3>
-<h3>{{user.first_name}}</h3>
-	<div>
-		<a href="/users/{{user.id}}/edit">Edit User</a>
-	</div>
-	<br />
-	<div>
-		<form action="/users/{{user.id}}?_method=DELETE" method="POST">
-			<input id="delete" type="submit" value="Delete user" />
-		</form>
+<div class="wrapper">
+	<h3>User Id Page</h3>
+	<h3>{{user.first_name}}</h3>
+		<div>
+			<a href="/users/{{user.id}}/edit">Edit User</a>
+		</div>
+		<br />
+		<div>
+			<form action="/users/{{user.id}}?_method=DELETE" method="POST">
+				<input id="delete" type="submit" value="Delete user" />
+			</form>
+				<br />
+		</div>
+		<div>
+		<!-- 	<a href="/users/{{user.id}}/tuts/new">See tuts</a> -->
+			<a href="/users/{{user.id}}/tuts/">See TUTs</a>
+		</div>
 			<br />
-	</div>
-	<div>
-	<!-- 	<a href="/users/{{user.id}}/tuts/new">See tuts</a> -->
-		<a href="/users/{{user.id}}/tuts/">See TUTs</a>
-	</div>
-		<br />
-	<ul>
-		<li>First Name: {{user.first_name}}</li>
-		<li>Last Name: {{user.last_name}}</li>
-		<br />
-		<li>Username: {{user.username}}</li>
-		<li>Email: {{user.email}}</li>
-		<br />
-		<li>Sign UP Date: {{user.created_at}}</li>
-		<li>Updated Date: {{user.updated_at}}</li>
-		<br />
-		<li>Number of TUTs: {{user.tuts.length}}</li>
-	</ul>
+		<ul>
+			<li>First Name: {{user.first_name}}</li>
+			<li>Last Name: {{user.last_name}}</li>
+			<br />
+			<li>Username: {{user.username}}</li>
+			<li>Email: {{user.email}}</li>
+			<br />
+			<li>Sign UP Date: {{user.created_at}}</li>
+			<li>Updated Date: {{user.updated_at}}</li>
+			<br />
+			<li>Number of TUTs: {{user.tuts.length}}</li>
+		</ul>
+</div><!-- wrapper -->
