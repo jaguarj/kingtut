@@ -133,6 +133,7 @@ input {
 	padding: .2rem;
 	border-radius: 10px;
 	height: 20px;
+	transition:  background 0.8s ease-in-out;
 }
 
 input:hover {
