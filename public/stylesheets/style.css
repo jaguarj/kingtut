@@ -27,7 +27,7 @@ body {
 
 #bottom {
 	text-align: center;
-	margin-top: 700px;
+	margin-top: 740px;
 	background: rgba(0,0,0,0.2);
 }
 
@@ -142,7 +142,7 @@ input:hover {
 @media only screen and (max-width: 520px) {
 
 	body {
-		background: tourquise;
+		/*background: tourquise;*/
 		transition:  background-color 0.3s ease-in-out;
 	}
 }
