@@ -10,6 +10,7 @@ router.get('/', function(req, res) {
 		.exec(function(err, users){
 			if (err) { console.log(err); }
 			console.log(users);
+			console.log("############# Home Page #############");
 			res.render('users/index.hbs', {
 				users: users
 		});
@@ -21,6 +22,7 @@ router.get('/new', function(req, res){
 	User.findById(req.params.id)
 		.exec(function(err, user){
 			if (err) console.log(err);
+			console.log("############# Add New User #############");
 			res.render('users/new.hbs')
 		// 	, {
 		// 		user: user
@@ -35,16 +37,11 @@ router.post('/', function(req, res) {
 		last_name: req.body.last_name,
 		email: req.body.email,
 		username: req.body.username
-		// tuts: req.body.tuts
-
-		// password: req.body.password,
-		// created_at: req.body.created_at,
-		// updated_at: req.body.updated_at,
-		// tuts: req.body.tuts
 	});
 	user.save(function(err, user){
 		if (err) { console.log(err); }
 		console.log(user);
+		console.log("############# Add New Users Updated #############");
 		res.redirect('/users');
 	});
 });
@@ -54,6 +51,7 @@ router.get('/:id/edit', function(req, res){
 	User.findById(req.params.id)
 		.exec(function(err, user){
 			if (err) console.log(err);
+			console.log("############# Users Edit #############");
 			res.render('users/edit.hbs', {
 				user: user
 		});
@@ -66,16 +64,15 @@ router.put('/:id', function(req, res){
 	User.findByIdAndUpdate(req.params.id, {
 		$set: {
 		first_name: req.body.first_name,
-		last_name: req.body.last_name, // Original settings
+		last_name: req.body.last_name,
 		email: req.body.email,
-		// username: req.body.username,
-		// password: req.body.password,
 
 		},
 	}, { new: true })
 		.exec(function(err, user){
 			if (err) { console.log(err); }
 			console.log(user);
+			console.log("############# Users Update #############");
 			res.render('users/show.hbs', {
 				user: user
 		});
@@ -88,6 +85,7 @@ router.get('/:id', function(req, res){
 	.exec(function(err, user) {
 		if (err) console.log(err);
 		console.log(user);
+		console.log("############# Users Show Page #############");
 		res.render('users/show.hbs', {
 			user: user
 		});
@@ -101,6 +99,7 @@ router.delete('/:id', function(req, res){
 		.exec(function(err, user){
 			if (err) console.log(err);
 			console.log('User deleted!');
+			console.log("############# User Deleted #############");
 			res.redirect('/users')
 	});
 });
@@ -112,6 +111,7 @@ router.get('/:id/tuts', function(req, res){
 			if (err) { console.log(err); }
 			console.log(user.id)
 			console.log(user.tuts)
+			console.log("############# Users TUT Index #############");
 			res.render('tuts/index.hbs', {
 				tuts: user.tuts,
 				user: user
@@ -132,7 +132,7 @@ router.post('/:id/tuts', function(req, res){
 			}
 
 			user.tuts.push(newTut)
-
+			console.log("############# New TUT Created and Stored #############");
 			user.save(function (err) {
 				if (err) console.log(err);
 				console.log('New tut created')
@@ -147,37 +147,13 @@ router.get('/:id/tuts/new', function(req, res){
 	User.findById(req.params.id)
 		.exec(function (err, user) {
 			if (err) { console.log(err) }
+				console.log("############# Show New Users TUT Created #############");
 				res.render('tuts/show', {
 					user: user
 
 		});
 	});
 });
-// Just added the Edit route 4:44pm Not working...
-// router.put('/:userId/tuts/:id/new', function(req, res){
-// 	User.findByIdAndUpdate(req.params.id)
-// 		User.findById(req.params.id)
-// 		.exec(function (err, user) {
-// 			if (err) { console.log(err) }
-// 				res.render('/:id/tuts/edit', {
-// 					user: user
-// 		});
-// 	});
-// });
-
-// Remove tut
-// router.delete('/:id/tuts/:id', function(req, res){
-// 	User.findByIdAndUpdate(req.params.userId, {
-// 		$pull: {
-// 			tuts: {_id: req.params.id}
-// 		}
-// 	});
-// 	.exec(function(err, tut){
-// 		if (err) console.log(err);
-// // Working on this delete route 7:17
-// 		res.render('/:id/tuts/:id/show')
-// 	});
-// });
 
 
 

@@ -44,10 +44,7 @@ router.put('/:id', function updateTut(req, res){
 			tut.link = req.body.link
 			user.save();
 			console.log("#####################TUT Controller#################")
-			// res.render('tuts/show', {
-			// 	tut: tut,
-			// 	user: user
-			// });
+
 			res.redirect(`/users/${req.params.userId}/tuts/${req.params.id}`)
 	});
 });
@@ -64,14 +61,7 @@ router.get('/new', function newTut(req, res){
 	});
 });
 
-// });
-// After
-// :id/tuts/:id
-
-// Before
-// /:id
-// Delete
-// /users/:userId/tuts   /:id
+// Delete Tuts this is working.
 router.delete('/:id', function deleteTut(req, res){
 	User.findById(req.params.userId)
 		.exec(function (err, user){
@@ -91,8 +81,6 @@ router.delete('/:id', function deleteTut(req, res){
 
 // Show
 
-// Before
-// /:id'
 router.get('/:id', function showTut(req, res){
 	User.findById(req.params.userId)
 		.exec(function (err, user){
