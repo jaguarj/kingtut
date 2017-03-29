@@ -17,6 +17,10 @@ body {
 	/*font-weight: black;*/
 	font-family: 'Roboto', sans-serif;
 
+/*	background-size: cover;
+	background-attachment: fixed;
+ 	background-repeat: no-repeat;*/
+
 }
 
 #wrapper {
@@ -26,7 +30,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-start;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,0.2);
 	letter-spacing: .1rem;
 	/*background: rgba();#343444;*/
 	/*box-shadow: 1px 1px 10px 1px;*/
@@ -38,20 +42,33 @@ body {
 	box-shadow: 1px 1px 10px 1px;
 }
 
-/*img {*/
-	  /* Set rules to fill background */
-  /*min-height: 100%;
-  min-width: 1024px;
-
-   Set up proportionate scaling
-  width: 100%;
-  height: auto;*/
-
-  /* Set up positioning */
-  /*position: fixed;
-  top: 0;
-  left: 0;
+/*footer {
+	background: red;
+	width: 100%;
+	height: 40px;
+	margin: 0;
+	background: rgba(0,0,0,0.2);
+	padding: 5px;
+	display: flex;
+	justify-content: center;
 }*/
+
+
+
+img {
+	  /* Set rules to fill background*/
+  max-height: 30px;
+  max-width: 30px;
+  margin-left: 1rem;
+
+
+
+}
+  /* Set up positioning */
+  /*position: fixed;*/
+/*  top: 10px;
+  left: 10px;*/
+
 
 .wrapper {
 	/*max-width: 100%;
