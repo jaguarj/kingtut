@@ -6,19 +6,18 @@
 html {
 	/*background: url(../images/bg.jpg);*/
 	background-image: url(../images/bg.jpg);
+	/*background-size: 100%;*/
+	background-position: height 100%;
+ 	background-repeat: cover;
 
 }
 
-
 body {
 	margin: 0 auto;
-/*	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+/*	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	/*font-weight: black;*/
 	font-family: 'Roboto', sans-serif;
-
-
-
 
 }
 
@@ -39,6 +38,23 @@ body {
 #wrapper:hover {
 	box-shadow: 1px 1px 10px 1px;
 }
+
+/*img {*/
+	  /* Set rules to fill background */
+  /*min-height: 100%;
+  min-width: 1024px;
+
+   Set up proportionate scaling
+  width: 100%;
+  height: auto;*/
+
+  /* Set up positioning */
+  /*position: fixed;
+  top: 0;
+  left: 0;
+}*/
+
+
 
 .wrapper {
 	/*max-width: 100%;
@@ -67,6 +83,7 @@ body {
  a {
   color: #00B7FF;
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.8rem;
   text-shadow: 1px 1px 3px #000;
   transition:  text-shadow 0.5s ease-in-out;
@@ -96,7 +113,8 @@ li {
 	display: flex;
 	justify-content: center;
 	padding-top: 10px;
-	font-size: 20px;
+/*	font-family: 'Roboto', sans-serif;*/
+	font-size: 24px;
 	list-style: none;
 
 }
@@ -109,6 +127,11 @@ li:hover {
 .back-btn {
 	display: flex;
 	justify-content: center;
+	transition:  text-shadow 0.5s ease-in-out;
+}
+
+.back-btn:hover {
+	text-shadow: 1px 1px 1px #010;
 }
 
 

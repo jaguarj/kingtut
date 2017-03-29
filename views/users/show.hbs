@@ -1,6 +1,6 @@
 <div class="wrapper">
 	<h3>User Id Page</h3>
-	<h3>{{user.first_name}}</h3>
+	<h3>{{user.username}}</h3>
 		<div>
 			<a href="/users/{{user.id}}/edit">Edit User</a>
 		</div>
@@ -29,3 +29,4 @@
 			<li>Number of TUTs: {{user.tuts.length}}</li>
 		</ul>
 </div><!-- wrapper -->
+<h3 class="back-btn"><a href="/users/{{user.id}}">Back</a></h3>
