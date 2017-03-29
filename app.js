@@ -11,6 +11,7 @@ var session = require('express-session');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 require('dotenv').config();
+// mongoose.connect(process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URI);
 var db = require('./db/db.js'); //Original settings
 var app = express();

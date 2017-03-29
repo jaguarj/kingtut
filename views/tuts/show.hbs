@@ -1,8 +1,8 @@
-<!-- <div class="wrapper"> -->
-	<h2>{{user.username}}'s TUTs</h2>
-		<h3>TUT Name: {{tut.name}}</h3>
+<div class="wrapper">
+	<h2><a href="/users/{{user.id}}/tuts">{{user.username}}</a>'s TUTs</h2>
+		<h3>TUT Name: <a href="/users/{{user.id}}/tuts">{{tut.name}}</a></h3>
 			<h3>Link: <a href="{{tut.link}}">{{tut.link}}</a></h3>
-<!-- </div> -->
+</div>
 <h3 class="back-btn"><a href="/users/{{user.id}}/tuts">Back</a></h3>
 
 
