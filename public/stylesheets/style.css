@@ -53,15 +53,15 @@ body {
 	justify-content: center;
 }*/
 
-
+#bottom {
+	text-align: center;
+}
 
 img {
 	  /* Set rules to fill background*/
   max-height: 30px;
   max-width: 30px;
   margin-left: 1rem;
-
-
 
 }
   /* Set up positioning */
