@@ -26,9 +26,14 @@ body {
 	box-shadow: 1px 1px 10px 1px;
 }
 
-#bottom {
+#footer {
+	postion: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
 	text-align: center;
-	margin-top: 740px;
+	margin: 0;
+	padding: 10px;
 	background: rgba(0,0,0,0.2);
 }
 

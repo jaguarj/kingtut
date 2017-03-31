@@ -3,6 +3,9 @@ var Schema = mongoose.Schema;
 // Use native promises
 mongoose.promise = global.Promise;
 
+// Make your models with more logic in your MODELS page.
+// Less logic for your routes. Skinny routes.
+//
 
 var TutSchema = new Schema({
 	name: String,
