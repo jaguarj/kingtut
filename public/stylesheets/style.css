@@ -10,8 +10,6 @@ body {
 	font-family: 'Roboto', sans-serif;
 	transition:  background-color 0.3s ease-in-out;
 
-
-
 }
 
 #wrapper {
@@ -29,9 +27,9 @@ body {
 	box-shadow: 1px 1px 10px 1px;
 }
 
+/*// Footer will not work without a Handlebars partial.*/
 
-
-#footer {
+/*#footer {
 	postion: fixed;
 	width: 100%;
 	bottom: 0;
@@ -39,10 +37,9 @@ body {
 	text-align: center;
 	margin-top: 100px;
 	padding: 10px;
-	/*background: rgba(0,0,0,0.2);*/
-	background: red;
+	background: rgba(0,0,0,0.2);
 }
-
+*/
 img {
   max-height: 30px;
   max-width: 30px;
@@ -154,9 +151,14 @@ input:hover {
 
 @media only screen and (max-width: 520px) {
 
-	body {
-		background: tomato;
+	html {
+		background: slategray;
 		transition:  background-color 0.3s ease-in-out;
+	}
+
+	.nav {
+
+		font-size: 1.1rem;
 	}
 }
 

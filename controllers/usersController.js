@@ -4,6 +4,8 @@ var router = express.Router();
 var User = require('../models/user.js');
 var Tut = require('../models/tut.js');
 
+
+
 // Users Index Route
 router.get('/', function(req, res) {
 	User.find({})
