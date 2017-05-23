@@ -3,12 +3,13 @@ html {
 	background-size: cover;
 	background-attachment: fixed;
  	background-repeat: no-repeat;
+ 	transition:  background-color 0.3s ease-in-out;
 }
 
 body {
 	margin: 0 auto;
 	font-family: 'Roboto', sans-serif;
-	transition:  background-color 0.3s ease-in-out;
+
 
 }
 

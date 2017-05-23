@@ -1,6 +1,7 @@
 <div class="wrapper">
 	<h3><a href="/users/{{user.id}}/tuts">{{user.username}}</a>'s TUTS!</h3>
 		<ul>
+		<a href="/users/{{user.id}}/tuts/{{tuts.id}}/new">New TUT</a>
 			{{#each user.tuts}}
 		<!-- 	<br /> -->
 			<h3>{{this.name}}</h3>
@@ -14,7 +15,7 @@
 			</form>
 			<br />
 			{{/each}}
-			<a href="/users/{{user.id}}/tuts/{{tuts.id}}/new">New TUT</a>
+			<!-- <a href="/users/{{user.id}}/tuts/{{tuts.id}}/new">New TUT</a> -->
 		</ul>
 </div>
 <h3 class="back-btn"><a href="/users/{{user.id}}/">Back</a></h3>
