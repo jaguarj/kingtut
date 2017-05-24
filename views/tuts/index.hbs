@@ -1,11 +1,11 @@
 <div class="wrapper">
 	<h3><a href="/users/{{user.id}}/tuts">{{user.username}}</a>'s TUTS!</h3>
 		<ul>
-		<a href="/users/{{user.id}}/tuts/{{tuts.id}}/new">New TUT</a>
+		<a href="/users/{{user.id}}/tuts/{{tuts.id}}/new">Add New TUT</a>
 			{{#each user.tuts}}
 		<!-- 	<br /> -->
 			<h3>{{this.name}}</h3>
-			<li><a href="{{this.link}}">{{this.link}}</a></li>
+			<li><a class="tut-link" href="{{this.link}}">{{this.link}}</a></li>
 			<br />
 			<a href="/users/{{../user.id}}/tuts/{{this.id}}/edit">Edit TUT</a>
 			<br />
